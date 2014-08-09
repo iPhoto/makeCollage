@@ -19,6 +19,12 @@
 		263908E019961B1F0051AC6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263908C819961B1F0051AC6C /* UIKit.framework */; };
 		263908E819961B1F0051AC6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 263908E619961B1F0051AC6C /* InfoPlist.strings */; };
 		263908EA19961B1F0051AC6C /* makeCollageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 263908E919961B1F0051AC6C /* makeCollageTests.m */; };
+		263908F619961C530051AC6C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263908F419961C530051AC6C /* SearchViewController.m */; };
+		263908F719961C530051AC6C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263908F519961C530051AC6C /* SearchViewController.xib */; };
+		2639093B19965D910051AC6C /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2639093919965D910051AC6C /* CollectionViewController.m */; };
+		2639093C19965D910051AC6C /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2639093A19965D910051AC6C /* CollectionViewController.xib */; };
+		26390944199664980051AC6C /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26390943199664980051AC6C /* CollectionCell.m */; };
+		26390946199664AC0051AC6C /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26390945199664AC0051AC6C /* CollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,15 @@
 		263908E519961B1F0051AC6C /* makeCollageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "makeCollageTests-Info.plist"; sourceTree = "<group>"; };
 		263908E719961B1F0051AC6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		263908E919961B1F0051AC6C /* makeCollageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = makeCollageTests.m; sourceTree = "<group>"; };
+		263908F319961C530051AC6C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ../SearchViewController.h; sourceTree = "<group>"; };
+		263908F419961C530051AC6C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ../SearchViewController.m; sourceTree = "<group>"; };
+		263908F519961C530051AC6C /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ../SearchViewController.xib; sourceTree = "<group>"; };
+		2639093819965D910051AC6C /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		2639093919965D910051AC6C /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		2639093A19965D910051AC6C /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
+		26390942199664980051AC6C /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		26390943199664980051AC6C /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		26390945199664AC0051AC6C /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +124,17 @@
 			children = (
 				263908D319961B1F0051AC6C /* AppDelegate.h */,
 				263908D419961B1F0051AC6C /* AppDelegate.m */,
+				263908F319961C530051AC6C /* SearchViewController.h */,
+				263908F419961C530051AC6C /* SearchViewController.m */,
+				263908F519961C530051AC6C /* SearchViewController.xib */,
 				263908D619961B1F0051AC6C /* Images.xcassets */,
 				263908CB19961B1F0051AC6C /* Supporting Files */,
+				2639093819965D910051AC6C /* CollectionViewController.h */,
+				2639093919965D910051AC6C /* CollectionViewController.m */,
+				2639093A19965D910051AC6C /* CollectionViewController.xib */,
+				26390942199664980051AC6C /* CollectionCell.h */,
+				26390943199664980051AC6C /* CollectionCell.m */,
+				26390945199664AC0051AC6C /* CollectionCell.xib */,
 			);
 			path = makeCollage;
 			sourceTree = "<group>";
@@ -219,8 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26390946199664AC0051AC6C /* CollectionCell.xib in Resources */,
+				2639093C19965D910051AC6C /* CollectionViewController.xib in Resources */,
 				263908CF19961B1F0051AC6C /* InfoPlist.strings in Resources */,
 				263908D719961B1F0051AC6C /* Images.xcassets in Resources */,
+				263908F719961C530051AC6C /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				263908D519961B1F0051AC6C /* AppDelegate.m in Sources */,
+				26390944199664980051AC6C /* CollectionCell.m in Sources */,
+				263908F619961C530051AC6C /* SearchViewController.m in Sources */,
+				2639093B19965D910051AC6C /* CollectionViewController.m in Sources */,
 				263908D119961B1F0051AC6C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +467,7 @@
 				263908EF19961B1F0051AC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		263908F019961B1F0051AC6C /* Build configuration list for PBXNativeTarget "makeCollageTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +476,7 @@
 				263908F219961B1F0051AC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
