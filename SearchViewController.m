@@ -17,25 +17,10 @@
 
 static NSMutableArray *images;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bc.jpg"]];
 }
 
 #pragma mark - Parser
@@ -86,7 +71,6 @@ static NSMutableArray *images;
         
         [images addObject:imageURL];
     }
-    
 }
 
 + (NSMutableArray *)imagePaths
@@ -98,7 +82,7 @@ static NSMutableArray *images;
 - (void)goToCollectionView
 {
     CollectionViewController *controller = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
-    controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:controller animated:YES completion:nil];
 
 }
@@ -115,5 +99,7 @@ static NSMutableArray *images;
 {
     [searchBar resignFirstResponder];
     [self parseImageUrlFromJSON];
+    
+    [self goToCollectionView];
 }
 @end
