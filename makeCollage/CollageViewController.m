@@ -1,11 +1,3 @@
-//
-//  CollageViewController.m
-//  makeCollage
-//
-//  Created by Svetlana Tsetsorina on 09.08.14.
-//  Copyright (c) 2014 BeOriginal. All rights reserved.
-//
-
 #import "CollageViewController.h"
 #import "CollectionViewController.h"
 #import <AVFoundation/AVFoundation.h>
@@ -67,39 +59,7 @@
     self.bottomRightView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i_bottom_right", index]];
 }
 
-- (void)imagePixel1:(int)imgParameter
-{
-    if (imgParameter < 1000) {
-        int idx = 1000;
-        [self getNames:idx];
-    } else if ((imgParameter >= 1000) && (imgParameter < 2000)) {
-        int idx = 2000;
-        [self getNames:idx];
-    } else if ((imgParameter >= 2000) && (imgParameter < 3000)) {
-        int idx = 3000;
-        [self getNames:idx];
-    } else if ((imgParameter >= 3000) && (imgParameter < 4000)) {
-        int idx = 4000;
-        [self getNames:idx];
-    } else if (imgParameter >= 4000) {
-        int idx = 5000;
-        [self getNames:idx];
-    }
-}
-
-- (void)createFrame1
-{
-    int imageWidth = self.collImage.size.width;
-    int imageHeight = self.collImage.size.height;
-    
-    if (imageHeight > imageWidth) {
-        [self imagePixel1:imageWidth];
-    } else {
-        [self imagePixel1:imageHeight];
-    }
-}
-
-- (void)imagePixel2:(int)imgParameter
+- (void)imagePixel:(int)imgParameter
 {
     if (imgParameter < 1000) {
         int idx = 1001;
@@ -119,49 +79,31 @@
     }
 }
 
-- (void)createFrame2
+- (void)createFrame
 {
     int imageWidth = self.collImage.size.width;
     int imageHeight = self.collImage.size.height;
     
     if (imageHeight > imageWidth) {
-        [self imagePixel2:imageWidth];
+        [self imagePixel:imageWidth];
     } else {
-        [self imagePixel2:imageHeight];
+        [self imagePixel:imageHeight];
     }
 }
 
-#pragma mark - Frames
-- (IBAction)toggleBtn:(UIButton *)sender
-{
-    if (sender.tag == 1) {
-
-        [self hideImage:self.topView];
-        [self hideImage:self.bottomView];
-        [self hideImage:self.leftView];
-        [self hideImage:self.rightView];
-        [self hideImage:self.topLeftView];
-        [self hideImage:self.topRightView];
-        [self hideImage:self.bottomLeftView];
-        [self hideImage:self.bottomRightView];
-        
-        if (self.topView.hidden == NO) {
-            [self createFrame1];
-        }
-    } else if (sender.tag == 2) {
-        
-        [self hideImage:self.topView];
-        [self hideImage:self.bottomView];
-        [self hideImage:self.leftView];
-        [self hideImage:self.rightView];
-        [self hideImage:self.topLeftView];
-        [self hideImage:self.topRightView];
-        [self hideImage:self.bottomLeftView];
-        [self hideImage:self.bottomRightView];
-        
-        if (self.topView.hidden == NO) {
-            [self createFrame2];
-        }
+#pragma mark - Frame
+- (IBAction)frameBtn:(id)sender {
+    [self hideImage:self.topView];
+    [self hideImage:self.bottomView];
+    [self hideImage:self.leftView];
+    [self hideImage:self.rightView];
+    [self hideImage:self.topLeftView];
+    [self hideImage:self.topRightView];
+    [self hideImage:self.bottomLeftView];
+    [self hideImage:self.bottomRightView];
+    
+    if (self.topView.hidden == NO) {
+        [self createFrame];
     }
 }
 

@@ -1,11 +1,3 @@
-//
-//  CollectionViewController.m
-//  makeCollage
-//
-//  Created by Svetlana Tsetsorina on 09.08.14.
-//  Copyright (c) 2014 BeOriginal. All rights reserved.
-//
-
 #import "CollectionViewController.h"
 #import "SearchViewController.h"
 #import "CollageViewController.h"

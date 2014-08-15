@@ -1,11 +1,3 @@
-//
-//  CollageViewController.h
-//  makeCollage
-//
-//  Created by Svetlana Tsetsorina on 09.08.14.
-//  Copyright (c) 2014 BeOriginal. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import "CollectionViewController.h"
 
@@ -29,7 +21,7 @@
 - (IBAction)sticker1Btn:(id)sender;
 - (IBAction)sticker2Btn:(id)sender;
 - (IBAction)downloadBtn:(id)sender;
-- (IBAction)toggleBtn:(UIButton *)sender;
+- (IBAction)frameBtn:(id)sender;
 
 
 @end
